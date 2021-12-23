@@ -1,25 +1,29 @@
 public class MovieRental {
 
 	public static void main(String[] args) {
-		//Create Customer
-		String myName = "Emmanuel";
-		Customer custom = new Customer(myName);
-		//Create Movie
-		Movie mov0 = new Movie("Inception", 1);
-		Movie mov1 = new Movie("Batman", 2);
-		Movie mov2 = new Movie("The Revenant", 0);
-		//Create Rental
-		Rental movieRental0 = new Rental(mov0, 5);
-		Rental movieRental1 = new Rental(mov1, 7);
-		Rental movieRental2 = new Rental(mov2, 3);
-		Rental movieRental3 = new Rental("The Joker", 0, 10);
-		//Add Rental
-		custom.addRental(movieRental0);
-		custom.addRental(movieRental1);
-		custom.addRental(movieRental2);
-		custom.addRental(movieRental3);
-		System.out.println(custom.printStatement());
-		System.out.println(custom.statementToXML());
+		//Create Customers
+		Customer averageCustomer = new Customer("Malcolm", 39, 'N');
+		Customer youngCustomer = new Customer("Emmanuel", 20, 'D');
+		Customer oldCustomer = new Customer("Idris", 63, 'H');
+		
+		//Add Rentals To Middle Aged Customer - average case
+		averageCustomer.addRental(new Rental("Black Panther", 2, 23));
+		averageCustomer.addRental(new Rental("Get Out", 0, 16));
+		averageCustomer.addRental(new Rental("Spiderverse", 0, 4));
+		System.out.println(averageCustomer.printStatement());
+		
+		//Add Rentals To Old Customer - several movie types case
+		oldCustomer.addRental(new Rental("Forrest Gump", 2, 10));
+		oldCustomer.addRental(new Rental("The Godfather", 0, 14));
+		oldCustomer.addRental(new Rental("Scarface", 0, 12));
+		oldCustomer.addRental(new Rental("Uncut Gems", 1, 7));
+		System.out.println(oldCustomer.printStatement());
+
+		//Add Rentals To Young Customer - new release & adolescent case
+		youngCustomer.addRental(new Rental("Pulp Fiction", 0, 11));
+		youngCustomer.addRental(new Rental("Ex-Machina", 0, 19));
+		youngCustomer.addRental(new Rental("Parasite", 1, 15));
+		System.out.println(youngCustomer.printStatement());
 	}
 
 }

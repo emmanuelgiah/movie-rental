@@ -1,0 +1,11 @@
+Implementing the following two new policies for a coupon system: 
+- The customer class has coupon parameters
+- There are two possible type of coupons
+- We modify the compute rental prices strategy based off the parameters
+
+
+a.	A coupon for a rental that allows 50% off the entire rental price. 
+- Divide the price in half
+
+b.	A coupon for a rental that takes 10$ off for a total rental of more than 50$. 
+- Subtract ten from the price

@@ -11,7 +11,8 @@ public class Movie {
         _title = title;
         _priceCode = priceCode;
     }
-    //add get and set method for price code
+
+    // add get and set method for price code
     public int getPriceCode() {
         return _priceCode;
     }
@@ -19,7 +20,8 @@ public class Movie {
     public void setPriceCode(int priceCode) {
         _priceCode = priceCode;
     }
-    //add get set method for title
+
+    // add get set method for title
     public String getTitle() {
         return _title;
     }
@@ -27,7 +29,8 @@ public class Movie {
     public void setTitle(String title) {
     	_title = title;
     }
-    //Move the show figures method
+
+    // Move the show figures method
    	public String showFigure(String statement, double amount) { 
    		statement += "\t" + _title +
                 "\t" + String.valueOf(amount) + "\n";
